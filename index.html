@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Todo</title>
 </head>
+
 <body>
 
     <div class="main">
-  <div class="todo">
- 
-    <nav>
-        <h3>Todo</h3>
-    </nav>
+        <div class="todo">
 
-    <div class="add">
-        <button>Add a Task</button>
-    </div>
-    
-    <div class="addtask">
-        <form>
-           <div class="title">  
-                 <input class="inputtitle" placeholder="Title" >              
-           </div>
+            <nav>
+                <h3>Todo</h3>
+            </nav>
 
-           <div>
-            <input  class="date" type="datetime-local">
-           </div>
-           
-           <div class="desc">
-         <textarea class="inputdesc" placeholder="Description"></textarea>
-           </div>
+            <div class="add">
+                <button class="addbtn">Add a Task</button>
+            </div>
 
-           <button>Submit</button>
+            <div class="addtask">
+                <form>
+                    <div class="title">
+                        <input class="inputtitle" placeholder="Title">
+                    </div>
 
-        </form>
-    </div>
+                    <div class="date">
+                        <input class="dateinp"  type="datetime-local">
+                    </div>
 
-    <div class="task">
-        <p>Tasks</p>
-        <div id="tasks" >
-        
+                    <div class="desc">
+                        <textarea rows="7" cols="30" class="inputdesc" placeholder="Description"></textarea>
+                    </div>
+                   
+                    <button class="submit" >Submit</button>
+                    
+
+                </form>
+            </div>
+
+            <div class="task">
+                <p>Tasks</p>
+
+            </div>
+
         </div>
     </div>
-    
-</div>
-  </div>  
 </body>
-<script src="js/jquery-3.7.1.js" >   </script>
-<script src="app.js" ></script>
+<script src="js/jquery-3.7.1.js">   </script>
+<script src="app.js"></script>
+
 </html>
