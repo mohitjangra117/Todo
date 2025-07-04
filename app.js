@@ -6,6 +6,14 @@ $(document).ready(function () {
         $(".addtask").toggle();
     })
 
+    $(".close").click(function(){
+         $(".addtask").hide();
+    })
+
+    $(".edit").click(function(){
+         $(".addtask").hide();
+    })
+
 
 
     let tasks = JSON.parse(localStorage.getItem("Data")) || [];
@@ -35,10 +43,6 @@ $(document).ready(function () {
 
         $(".addtask").toggle();
 
-        //   tasks.clear();
-
-
-        //   console.log(tasks);
         displaytasks();
 
 
@@ -49,19 +53,21 @@ $(document).ready(function () {
 
         $('.task').empty();    // To remove duplicate value 
 
-        tasks.forEach((t) => {
+        tasks.forEach((t,index) => {
 
             $('.task').append(
                 ` 
         <div class="tasks"  >
         <div>
-        <div class="checkbox" > <input class="check" type="checkbox" > </div>
+        <div class="checkbox" > <input class="check" type="checkbox" data-index="${index}"> </div>
 
-         <div class="tt1" >  ${t.title}</div> 
+         <div class="tt1" data-index="${index}">   ${t.title}</div> 
          <div class="tt2" >${t.date} </div>
         </div>
         
          <div class="tt3" >${t.desc} </div>
+        </div>
+        
            </div> 
       
      `
@@ -73,36 +79,38 @@ $(document).ready(function () {
 
     displaytasks();
 
+let completed=[];
+
+ $(document).on('click', '.check', function () {
+    const index = $(this).data('index');
+//    console.log(index);
+// console.log(tasks[index]);
+    tasks.splice(index, 1); 
+    localStorage.setItem("Data", JSON.stringify(tasks));
+    // alert("Task Completed");
+    displaytasks(); 
+  });
 
 
-    $('.checkbox').click(function () {
 
 
-        let x = $(this).next('div').text().trim();
-        console.log(x);
-        tasks = tasks.filter((item) => {
-            console.log(item.title);
-            if (x != item.title) {
-                return item.title != x
-            }
-        }
-        )
 
-     
 
-        localStorage.setItem("Data", JSON.stringify(tasks));
-        // location.reload();
-        displaytasks();
+//////////    Edit Task   ///////
 
-    }
 
-    );
+$(document).on('click','.tt1',function(){
+    const index=$(this).data('index');
+     console.log(tasks[index]);
 
+})
 
 });
 
 
-//   <div class="tt" > ${t.desc}</div>
+
+// layoutshift
+
 
 
 

@@ -22,12 +22,13 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: aqua; */
+  
 
 }
 
 nav>h3{
     font-size:30px;
+    color:#4A4DE7;
    
 }
 
@@ -38,8 +39,7 @@ nav>h3{
 .add>button{
     padding: 10px;
     border-radius: 10px;
-    /* background-color: rgb(139, 236, 139); */
-    background-color:#A374D5;
+    background-color:#2c78f1;
     color: white;
     font-size: 15px;
     font-weight: 600;
@@ -55,6 +55,8 @@ border:2px solid #6F38C5;
 .task{
     padding: 15px;
     background-color: #F6F6F6;
+     max-height: 400px;     
+  overflow-y: auto;
 }
 
 .tasks{
@@ -73,7 +75,6 @@ border:2px solid #6F38C5;
     display:none;
     width:350px;
     height: 300px;
-    /* background-color:#FFC7C7; */
     background-color:#87C4FF;
 }
 
@@ -92,14 +93,12 @@ border:2px solid #6F38C5;
 .task{
     font-size: 15px;
     color: #00425A;
-    /* color:white; */
     font-weight: 500;
 }
 
 .tt1{
     padding:5px 10px ;
     border:2px solid #368C72;
-    /* background-color: #7ECBA1; */
     background-color: #B0D9B1;
     min-width: 180px;
     font-size: 15px;
@@ -119,13 +118,24 @@ border:2px solid #6F38C5;
 }
 
 .tt3{
+    margin-left: 40px;
      font-size: 12px;
     border: 2px solid;
+    font-weight:500;
     padding: 5px 10px;  
     border-radius:10px;
     border:2px solid #87C4FF;
     background-color: #91F3FC;
     box-shadow: 2px 5px 10px #A3D8F4;
+    word-break: break-all;
+    
+
+}
+
+.tt1, .tt2, .tt3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;      /* allows text to wrap to next line */
 }
 
 .tasks{
@@ -133,9 +143,14 @@ border:2px solid #6F38C5;
     border-radius: 20px;
     display: flex;
     gap:10px;
+    margin-top: 10px;
     flex-direction: column;
     padding:10px 10px;
 }
+
+
+
+
 
 .tasks>div{
     
@@ -174,6 +189,25 @@ border:2px solid #6F38C5;
       padding: 10px 10px;
      border-radius: 10px; 
      overflow: hidden;
+
+}
+
+
+
+.edit{
+    position: absolute;
+    top:80px;
+   left:110px;
+    width: 300px;
+    display: none;
+    height: 200px;
+    border: 2px solid black ;
+}
+
+
+.close{
+    padding:5px 10px;
+    border-radius: 20px;
 
 }
 

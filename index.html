@@ -18,7 +18,7 @@
         <div class="todo">
 
             <nav>
-                <h3>Todo</h3>
+                <h3>Todo List</h3>
             </nav>
 
             <div class="add">
@@ -26,21 +26,22 @@
             </div>
 
             <div class="addtask">
+                
                 <form>
                     <div class="title">
-                        <input class="inputtitle" placeholder="Title">
+                        <input required class="inputtitle" placeholder="Title">
                     </div>
 
                     <div class="date">
-                        <input class="dateinp"  type="datetime-local">
+                        <input required class="dateinp"  type="date">
                     </div>
 
                     <div class="desc">
-                        <textarea rows="7" cols="30" class="inputdesc" placeholder="Description"></textarea>
+                        <textarea required rows="7" cols="30" class="inputdesc" placeholder="Description"></textarea>
                     </div>
                    
                     <button class="submit" >Submit</button>
-                    
+                    <button class="close" > close </button>
 
                 </form>
             </div>
@@ -49,6 +50,8 @@
                 <p>Tasks</p>
 
             </div>
+
+    
 
         </div>
     </div>
