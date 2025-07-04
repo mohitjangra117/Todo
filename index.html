@@ -18,14 +18,36 @@
     <div class="add">
         <button>Add a Task</button>
     </div>
-     
+    
+    <div class="addtask">
+        <form>
+           <div class="title">  
+                 <input class="inputtitle" placeholder="Title" >              
+           </div>
+
+           <div>
+            <input  class="date" type="datetime-local">
+           </div>
+           
+           <div class="desc">
+         <textarea class="inputdesc" placeholder="Description"></textarea>
+           </div>
+
+           <button>Submit</button>
+
+        </form>
+    </div>
+
     <div class="task">
         <p>Tasks</p>
         <div id="tasks" >
+        
         </div>
     </div>
     
 </div>
   </div>  
 </body>
+<script src="js/jquery-3.7.1.js" >   </script>
+<script src="app.js" ></script>
 </html>

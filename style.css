@@ -7,6 +7,7 @@
 
 .todo{
     margin-top: 100px;
+    position: relative;
     width: 400px;
     height: 80%;
     border: 2px solid gray;
@@ -32,3 +33,27 @@ nav{
     padding: 0px 20px;
 }
 
+
+.addtask{
+    position: absolute;
+    left: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px dashed black;
+    display:none;
+    width:300px;
+    height: 200px;
+    background-color: aqua;
+}
+
+.tt{
+    padding:2px 20px ;
+}
+
+#tasks{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+
+    
+}
